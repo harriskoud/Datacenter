@@ -1,3 +1,13 @@
-<p>
-  dashboard works!
-</p>
+<div class="container mt-2">
+  <div class="card card-block">
+    <nav class="navbar navbar-dark bg-inverse mb-1">
+      <h1 class="mb-0" >Overall Metrics</h1>
+    </nav>
+    <div class="row">
+      <app-metric class="col-sm-6" [title]="'CPU'" [description]="'utilization of CPU cores'" [used]="cpu.used"
+        [available]="cpu.available"></app-metric>
+      <app-metric class="col-sm-6" [title]="'MEMORY'" [description]="'utilization of Memory'" [used]="mem.used"
+        [available]="mem.available"></app-metric>
+    </div>
+  </div>
+</div>

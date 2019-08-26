@@ -5,12 +5,18 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
+import { MetricComponent } from './components/metric/metric.component';
+import { NodesComponent } from './components/nodes/nodes.component';
+import { NodesRowComponent } from './components/nodes-row/nodes-row.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     DashboardComponent,
-    NavbarComponent
+    NavbarComponent,
+    MetricComponent,
+    NodesComponent,
+    NodesRowComponent
   ],
   imports: [
     BrowserModule,
