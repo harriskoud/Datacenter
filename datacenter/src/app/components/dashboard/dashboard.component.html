@@ -1,7 +1,7 @@
 <div class="container mt-2">
   <div class="card card-block">
     <nav class="navbar navbar-dark bg-inverse mb-1">
-      <h1 class="mb-0" >Overall Metrics</h1>
+      <h1 class="mb-0">Overall Metrics</h1>
     </nav>
     <div class="row">
       <app-metric class="col-sm-6" [title]="'CPU'" [description]="'utilization of CPU cores'" [used]="cpu.used"
@@ -10,4 +10,46 @@
         [available]="mem.available"></app-metric>
     </div>
   </div>
-</div>
+
+
+  <!-- <div>
+    <table>
+      <th>
+        Cluster1
+      </th>
+      <tr>
+        <th>Node</th>
+        <th>CPU</th>
+        <th>Memory</th>
+      </tr>
+      <tr *ngFor="let node of cluster1">
+        <td>{{node.name}}</td>
+        <td>{{node.cpu.used}}</td>
+        <td>{{node.mem.available}}</td>
+      </tr>
+    </table>
+  
+  </div> -->
+
+  <div class="container mt-2">
+    <div class="card card-block">
+      <div class="card-body">
+        <nav class="navbar">
+          <h1 class="navbar-brand mb-0">Cluster 1</h1>
+        </nav>
+        <table app-nodes class="table table-hover">
+          <tr *ngFor="let node of cluster1">
+            <app-nodes-row  [node]="node"></app-nodes-row>
+          </tr>
+        </table>
+        <nav class="navbar">
+          <h1 class="navbar-brand mb-0">Cluster 2</h1>
+        </nav>
+        <table app-nodes class="table table-hover">
+          <tr *ngFor="let node of cluster2">
+            <app-nodes-row  [node]="node"></app-nodes-row>
+          </tr>
+        </table>
+      </div>
+    </div>
+  </div>
